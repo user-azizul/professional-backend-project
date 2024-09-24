@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 
 const userSchema = new Schema(
   {
-    usernames: {
+    username: {
       type: String,
       required: true,
       unique: true,
@@ -47,7 +47,7 @@ const userSchema = new Schema(
     },
   },
   {
-    timeStamp: true,
+    timestamps: true,
   }
 );
 userSchema.pre("save", async function (next) {
