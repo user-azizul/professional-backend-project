@@ -19,6 +19,7 @@ router.route("/register").post(
 );
 router.route("/login").post(loginUser);
 // secured routes
+// secured routes
 router.route("/logout", veryfyJWT, logoutUser);
 
 export default router;
